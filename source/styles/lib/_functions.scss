@@ -1,0 +1,12 @@
+// rem-calc(n) - Keep consistent rem and px values
+// 16 * 0.0625 = 1
+
+$rem: (1 / $base) !default;
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function rem-calc($value) {
+  @return (strip-unit($value) * $rem + rem);
+}

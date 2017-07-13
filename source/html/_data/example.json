@@ -1,0 +1,5 @@
+[
+  { "message": "This message is looping the same template through a JSON file: '/_data/example.json'" },
+  { "message": "This is the second loop." },
+  { "message": "And this is the third loop." }
+]

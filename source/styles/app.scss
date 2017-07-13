@@ -1,0 +1,31 @@
+@charset 'UTF-8';
+
+// Change settings for your site's styles
+@import 'variables';
+
+// Framework import from node_modules
+// You can also @import bootstrap, foundation, bourban, etc.
+@import 'based.css/src/based';
+
+// Lib - app dependencies and mixins
+@import 'lib/root';
+@import 'lib/mixins';
+@import 'lib/functions';
+
+// Core - basic styles shared between pages/components
+@import 'core/fonts';
+@import 'core/base';
+@import 'core/colors';
+
+// Components - functional pieces used in multiple places
+@import 'components/shared';
+@import 'components/button';
+@import 'components/forms';
+
+// Sections - styles specific to universal sections
+@import 'sections/nav';
+@import 'sections/header';
+@import 'sections/footer';
+
+// Pages - styles specific to a single page
+@import 'pages/home';

@@ -1,0 +1,102 @@
+// @include font();
+
+body {
+  margin: 0;
+  color: $color-black;
+  @include regular-font();
+  line-height: $line-height;
+  background: white;
+  transition: background .15s ease-out;
+}
+
+body.transitioning {
+  background: $color-primary;
+}
+
+body.short {
+  .medium-duration, .medium-duration-block, .long-duration, .long-duration-block, {
+    display: none;
+  }
+}
+
+body.medium {
+  .medium-duration {
+    display: inline;
+  }
+  .medium-duration-block {
+    display: block;
+  }
+  .long-duration, .long-duration-block {
+    display: none;
+  }
+}
+
+body.long {
+  .medium-duration {
+    display: inline;
+  }
+  .medium-duration-block {
+    display: block;
+  }
+  .long-duration {
+    display: inline;
+  }
+  .long-duration-block {
+    display: block;
+  }
+  .not-long-duration {
+    display: none;
+  }
+}
+
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, pre, table, blockquote {
+  margin-top: $spacing;
+  margin-bottom: $spacing;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: $based_spacing;
+}
+
+h5 {
+  font-size: 24px;
+  margin-top: $based_spacing * 2;
+  margin-bottom: $based_spacing / 2;
+}
+
+ul, ol {}
+
+a {
+  color: $color-black;
+  text-decoration: none;
+}
+a.active, a.active-time {
+  color: $color-primary;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p > a {
+  text-decoration: underline;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+i, em {}
+
+hr {}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.vh100 {
+  height: 100vh;
+}
