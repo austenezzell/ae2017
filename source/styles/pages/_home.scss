@@ -5,3 +5,32 @@
 .portrait {
   margin: $based_spacing * 4 0;
 }
+.section-title {
+  margin: $based_spacing * 6 0 0;
+}
+.project {
+  transition: background .15s ease-out;
+  background: white;
+  position: relative;
+  margin: $based_spacing * 2 0;
+  text-decoration: none;
+  cursor: pointer;
+  .secondary-asset {
+    position: absolute;
+    display: none;
+  }
+  .secondary-asset.active {
+    display: block;
+  }
+  .project-overview {
+    background: $color-black;
+    p, h5, a {
+      color: white;
+    }
+    a {
+      text-decoration: underline;
+      display: inline-block;
+      margin-bottom: $based_spacing;
+    }
+  }
+}

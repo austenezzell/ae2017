@@ -9,7 +9,7 @@ body {
   transition: background .15s ease-out;
 }
 
-body.transitioning {
+body.transitioning, body.transitioning .project {
   background: $color-primary;
 }
 
@@ -92,11 +92,20 @@ i, em {}
 
 hr {}
 
-img {
+.width-full {
   width: 100%;
   height: auto;
 }
 
 .vh100 {
   height: 100vh;
+}
+
+.differene-text {
+  color: white;
+  mix-blend-mode: difference;
+}
+
+.pe-none {
+  pointer-events: none;
 }
