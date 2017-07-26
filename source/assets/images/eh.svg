@@ -1,0 +1,27 @@
+<svg width="45" height="45" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>eh</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(1821 -7515)">
+<g id="eh">
+<g id="face">
+<use xlink:href="#path0_fill" transform="translate(-1821 7515)" fill="#FFFFFF"/>
+</g>
+<g id="eyes">
+<g id="Ellipse 2">
+<use xlink:href="#path1_fill" transform="translate(-1807 7531)" fill="#FFFFFF"/>
+</g>
+<g id="Ellipse 2">
+<use xlink:href="#path1_fill" transform="translate(-1795 7531)" fill="#FFFFFF"/>
+</g>
+</g>
+<g id="mouth">
+<use xlink:href="#path2_fill" transform="translate(-1807 7544.5)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 22.5 42C 33.2696 42 42 33.2696 42 22.5C 42 11.7304 33.2696 3 22.5 3C 11.7304 3 3 11.7304 3 22.5C 3 33.2696 11.7304 42 22.5 42ZM 22.5 45C 34.9264 45 45 34.9264 45 22.5C 45 10.0736 34.9264 0 22.5 0C 10.0736 0 0 10.0736 0 22.5C 0 34.9264 10.0736 45 22.5 45Z"/>
+<path id="path1_fill" d="M 4 2.5C 4 3.88071 3.10457 5 2 5C 0.89543 5 0 3.88071 0 2.5C 0 1.11929 0.89543 0 2 0C 3.10457 0 4 1.11929 4 2.5Z"/>
+<path id="path2_fill" fill-rule="evenodd" d="M 17 3L 0 3L 0 0L 17 0L 17 3Z"/>
+</defs>
+</svg>

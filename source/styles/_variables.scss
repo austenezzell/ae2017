@@ -15,6 +15,7 @@ $based_grid-breakpoints: (
   md: 48rem,
   lg: 64rem,
   xl: 80rem,
+  xxl: 110rem,
 );
 $based_grid-columns: 8;
 $based_grid-max-width: 100%;
@@ -27,6 +28,7 @@ $based_spacing-multiplier: 4;
 $color-black: #000;
 $color-primary: #2E00EE;
 $color-secondary: rebeccapurple;
+$color-gray: #E5E5E5;
 
 $base: $based;
 $font-size: 64px;

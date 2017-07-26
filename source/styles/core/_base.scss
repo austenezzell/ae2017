@@ -6,37 +6,66 @@ body {
   @include regular-font();
   line-height: $line-height;
   background: white;
-  transition: background .15s ease-out;
+  transition: background 2s ease-out;
+
 }
 
-body.transitioning, body.transitioning .project {
-  background: $color-primary;
-}
+// body.transitioning, body.transitioning .project {
+//   background: transparent;
+//   position: relative;
+// }
 
 body.short {
-  .medium-duration, .medium-duration-block, .long-duration, .long-duration-block, {
+  .medium-duration, .medium-duration-block, .medium-duration-flex, .long-duration, .long-duration-block, .long-duration-flex, .medium-and-long-duration {
     display: none;
+  }
+  background: white;
+  .project {
+    transition: background 2s ease-out;
+    background: white;
+  }
+  footer {
+    background: white;
   }
 }
 
 body.medium {
+  background: $color-gray;
   .medium-duration {
     display: inline;
   }
   .medium-duration-block {
     display: block;
   }
-  .long-duration, .long-duration-block {
+  .medium-duration-flex {
+    display: flex;
+  }
+  .long-duration, .long-duration-block, .long-duration-flex {
     display: none;
+  }
+  .project {
+    transition: background 2s ease-out;
+    background: $color-gray;
+  }
+  footer {
+    background: $color-gray;
   }
 }
 
 body.long {
+  background: $color-black;
+  color: white;
+  a {
+    color: white;
+  }
   .medium-duration {
     display: inline;
   }
   .medium-duration-block {
     display: block;
+  }
+  .medium-duration-flex {
+    display: flex;
   }
   .long-duration {
     display: inline;
@@ -44,8 +73,18 @@ body.long {
   .long-duration-block {
     display: block;
   }
+  .long-duration-flex {
+    display: flex;
+  }
   .not-long-duration {
     display: none;
+  }
+  .project {
+    transition: background 2s ease-out;
+    background: $color-black;
+  }
+  footer {
+    background: $color-black;
   }
 }
 
@@ -55,15 +94,36 @@ p, ul, ol, pre, table, blockquote {
   margin-bottom: $spacing;
 }
 
-p {
+p, .p {
   margin-top: 0;
   margin-bottom: $based_spacing;
-}
+  font-size: 32px;
 
+  @include breakpoint(md) {
+    font-size: 40px;
+  }
+  @include breakpoint(lg) {
+    font-size: 64px;
+  }
+
+  @include breakpoint(xxl) {
+    font-size: 72px;
+  }
+}
+p.small-text {
+  font-size: 18px;
+  line-height: 1.5;
+  @include breakpoint(md) {
+    font-size: 24px;
+  }
+}
 h5 {
-  font-size: 24px;
   margin-top: $based_spacing * 2;
   margin-bottom: $based_spacing / 2;
+  font-size: 18px;
+  @include breakpoint(md) {
+    font-size: 24px;
+  }
 }
 
 ul, ol {}
@@ -92,9 +152,16 @@ i, em {}
 
 hr {}
 
+
 .width-full {
   width: 100%;
   height: auto;
+}
+.minvh50 {
+  min-height: 50vh;
+}
+.minvh100 {
+  min-height: 100vh;
 }
 
 .vh100 {
@@ -103,6 +170,10 @@ hr {}
 
 .differene-text {
   color: white;
+  mix-blend-mode: difference;
+}
+
+.difference {
   mix-blend-mode: difference;
 }
 

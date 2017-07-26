@@ -9,12 +9,30 @@
   margin: $based_spacing * 6 0 0;
 }
 .project {
-  transition: background .15s ease-out;
+
   background: white;
   position: relative;
-  margin: $based_spacing * 2 0;
+  margin: $based_spacing * 2 0 $based_spacing * 7;
   text-decoration: none;
   cursor: pointer;
+  @include breakpoint(md) {
+    margin: $based_spacing * 2 0 $based_spacing * 10;
+  }
+  @include breakpoint(lg) {
+    margin: $based_spacing * 2 0 $based_spacing * 12;
+  }
+  @include breakpoint(xl) {
+    margin: $based_spacing * 2 0 $based_spacing * 14;
+  }
+  @include breakpoint(xl) {
+    margin: $based_spacing * 2 0 $based_spacing * 16;
+  }
+  .project-intro {
+    position: relative;
+    @include breakpoint(sm) {
+      position: absolute;
+    }
+  }
   .secondary-asset {
     position: absolute;
     display: none;
@@ -23,7 +41,7 @@
     display: block;
   }
   .project-overview {
-    background: $color-black;
+    background: $color-primary;
     p, h5, a {
       color: white;
     }
@@ -31,6 +49,17 @@
       text-decoration: underline;
       display: inline-block;
       margin-bottom: $based_spacing;
+      @extend .p;
     }
   }
 }
+// .medium {
+//   .project {
+//     background: $color-gray;
+//   }
+// }
+// .long {
+//   .project {
+//     background: $color-black;
+//   }
+// }

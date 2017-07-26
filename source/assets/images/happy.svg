@@ -1,0 +1,25 @@
+<svg width="45" height="45" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(1784 -7445)">
+<g id="Group">
+<g id="Ellipse (Stroke)">
+<use xlink:href="#path0_fill" transform="translate(-1784 7445)" fill="#FFFFFF"/>
+</g>
+<g id="Vector (Stroke)">
+<use xlink:href="#path1_fill" transform="translate(-1775.26 7472.19)" fill="#FFFFFF"/>
+</g>
+<g id="Ellipse 2">
+<use xlink:href="#path2_fill" transform="translate(-1770 7459)" fill="#FFFFFF"/>
+</g>
+<g id="Ellipse 2">
+<use xlink:href="#path2_fill" transform="translate(-1758 7459)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 22.5 42C 33.2696 42 42 33.2696 42 22.5C 42 11.7304 33.2696 3 22.5 3C 11.7304 3 3 11.7304 3 22.5C 3 33.2696 11.7304 42 22.5 42ZM 22.5 45C 34.9264 45 45 34.9264 45 22.5C 45 10.0736 34.9264 0 22.5 0C 10.0736 0 0 10.0736 0 22.5C 0 34.9264 10.0736 45 22.5 45Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 10.5891 9.83771C 5.70724 8.50972 1.96803 4.67752 0 1.62597L 2.52116 0C 4.25683 2.69126 7.46206 5.87806 11.3765 6.9429C 15.1079 7.95795 19.8688 7.14615 25.1293 1.10419L 27.3919 3.07413C 21.5412 9.79398 15.654 11.2155 10.5891 9.83771Z"/>
+<path id="path2_fill" d="M 4 4.5C 4 6.98528 3.10457 9 2 9C 0.89543 9 0 6.98528 0 4.5C 0 2.01472 0.89543 0 2 0C 3.10457 0 4 2.01472 4 4.5Z"/>
+</defs>
+</svg>

@@ -3,7 +3,61 @@
 */
 
 footer {
+
   a {
     text-decoration: underline;
+  }
+  p {
+    margin: 0;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    li {
+      list-style: none;
+      float: left;
+      padding: 0 30px 0 0;
+    }
+  }
+
+  .feedback {
+    .reaction {
+      display: none;
+    }
+    &.happy {
+      .how-easy {
+        display: none;
+      }
+      ul {
+        display: none;
+      }
+      .reaction.happy {
+        display: block;
+      }
+    }
+    &.eh {
+      .how-easy {
+        display: none;
+      }
+      ul {
+        display: none;
+      }
+      .reaction.eh {
+        display: block;
+      }
+    }
+    &.sad {
+      .how-easy {
+        display: none;
+      }      
+      ul {
+        display: none;
+      }
+      .reaction.sad {
+        display: block;
+      }
+    }
   }
 }

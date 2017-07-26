@@ -9,8 +9,8 @@ export default function () {
     currentSlideCount.push(0);
     let currentSlide = i;
     project[i].addEventListener('click', (e) => {
-      e.preventDefault();
       if (e.target.tagName.toLowerCase() !== 'a') {
+        e.preventDefault();
         if ( currentSlideCount[currentSlide] < projectSlides[currentSlide].length ) {
           projectSlides[currentSlide][currentSlideCount[currentSlide]].classList.add('active');
           currentSlideCount[currentSlide]++;

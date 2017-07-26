@@ -6,23 +6,23 @@
   }
 
   @else if $class == sm {
-    @media (min-width: map_get($grid-breakpoints, sm)) { @content; }
+    @media (min-width: map_get($based_grid-breakpoints, sm)) { @content; }
   }
 
   @else if $class == md {
-    @media (min-width: map_get($grid-breakpoints, md)) { @content; }
+    @media (min-width: map_get($based_grid-breakpoints, md)) { @content; }
   }
 
   @else if $class == lg {
-    @media (min-width: map_get($grid-breakpoints, lg)) { @content; }
+    @media (min-width: map_get($based_grid-breakpoints, lg)) { @content; }
   }
 
   @else if $class == xl {
-    @media (min-width: map_get($grid-breakpoints, xl)) { @content; }
+    @media (min-width: map_get($based_grid-breakpoints, xl)) { @content; }
   }
 
   @else if $class == xxl {
-    @media (min-width: map_get($grid-breakpoints, xxl)) { @content; }
+    @media (min-width: map_get($based_grid-breakpoints, xxl)) { @content; }
   }
 
   @else {

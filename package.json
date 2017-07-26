@@ -49,6 +49,7 @@
   "author": "Cabe Branson",
   "license": "MIT",
   "dependencies": {
-    "based.css": "^1.0.1"
+    "based.css": "^1.0.1",
+    "in-view": "^0.6.1"
   }
 }
