@@ -1,0 +1,40 @@
+/*
+  ABOUT PAGE
+*/
+body.about {
+  overflow-y: hidden;
+  .about-content {
+    visibility: visible;
+    opacity: 1;
+    filter:blur(0);
+    transition: all .6s ease;
+  }
+}
+.about-content {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FFF15F;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  padding: 120px 0;
+  filter:blur(300px);
+  opacity: 0;
+  p, ul, li a, a {
+    color: black!important;
+  }
+  .close-about {
+    z-index: 999;
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    p {
+      margin: 0;
+    }
+  }
+}

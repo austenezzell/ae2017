@@ -1,5 +1,3 @@
-// @include font();
-
 body {
   margin: 0;
   color: $color-black;
@@ -7,13 +5,22 @@ body {
   line-height: $line-height;
   background: white;
   transition: background 2s ease-out;
-
 }
 
-// body.transitioning, body.transitioning .project {
-//   background: transparent;
-//   position: relative;
-// }
+
+.fade-blur {
+  animation-delay: 0s;
+  animation-duration: .9s;
+  animation-name: fade-blur;
+  animation-fill-mode: forwards;
+}
+.transitioning {
+  .transition {
+    animation-delay: 0s;
+    animation-duration: .6s;
+    animation-name: out-in;
+  }
+}
 
 body.short {
   .medium-duration, .medium-duration-block, .medium-duration-flex, .long-duration, .long-duration-block, .long-duration-flex, .medium-and-long-duration {
@@ -22,6 +29,8 @@ body.short {
   background: white;
   .project {
     transition: background 2s ease-out;
+  }
+  .project-module {
     background: white;
   }
   footer {
@@ -45,6 +54,8 @@ body.medium {
   }
   .project {
     transition: background 2s ease-out;
+  }
+  .project-module {
     background: $color-gray;
   }
   footer {
@@ -81,6 +92,8 @@ body.long {
   }
   .project {
     transition: background 2s ease-out;
+  }
+  .project-module {
     background: $color-black;
   }
   footer {
@@ -179,4 +192,8 @@ hr {}
 
 .pe-none {
   pointer-events: none;
+}
+
+.nobr {
+  white-space: nowrap;
 }

@@ -1,20 +1,35 @@
-/*
-  Place styles specific to the homepage in here.
-*/
-
+.hi {
+  background: white;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  pointer-events: none;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
+  animation-duration: .4s;
+  animation-name: fade-out;
+  p {
+    animation-fill-mode: forwards;
+    animation-duration: .4s;
+    animation-name: in-right;
+  }
+}
 .portrait {
-  margin: $based_spacing * 4 0;
+  margin: $based_spacing * 1 0;
+  @include breakpoint(md) {
+    margin: $based_spacing * 4 0;
+  }
 }
 .section-title {
   margin: $based_spacing * 6 0 0;
 }
-.project {
-
+.project-module {
   background: white;
-  position: relative;
   margin: $based_spacing * 2 0 $based_spacing * 7;
-  text-decoration: none;
-  cursor: pointer;
   @include breakpoint(md) {
     margin: $based_spacing * 2 0 $based_spacing * 10;
   }
@@ -27,21 +42,54 @@
   @include breakpoint(xl) {
     margin: $based_spacing * 2 0 $based_spacing * 16;
   }
+}
+.project {
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 100%;
+  }
   .project-intro {
     position: relative;
     @include breakpoint(sm) {
       position: absolute;
     }
   }
+  .secondary-asset-container {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    .flex-row {
+      height: 100%;
+    }
+  }
   .secondary-asset {
     position: absolute;
-    display: none;
+    visibility: hidden;
+    .video-container {
+      pointer-events: none;
+      position: relative;
+      &:after {
+        content:'';
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+      }
+    }
   }
   .secondary-asset.active {
-    display: block;
+    visibility: visible;
   }
   .project-overview {
     background: $color-primary;
+    padding: 40px;
     p, h5, a {
       color: white;
     }
@@ -53,13 +101,3 @@
     }
   }
 }
-// .medium {
-//   .project {
-//     background: $color-gray;
-//   }
-// }
-// .long {
-//   .project {
-//     background: $color-black;
-//   }
-// }

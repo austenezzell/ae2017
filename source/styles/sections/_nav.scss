@@ -3,6 +3,10 @@
 */
 .time-btn {
   display: inline-block;
+  margin: 0 6px;
+  span {
+    padding: 2px;
+  }
 }
 .short {
   .short-btn {

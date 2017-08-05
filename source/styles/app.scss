@@ -8,6 +8,7 @@
 @import 'based.css/src/based';
 
 // Lib - app dependencies and mixins
+@import 'lib/animations';
 @import 'lib/root';
 @import 'lib/mixins';
 @import 'lib/functions';
@@ -29,3 +30,4 @@
 
 // Pages - styles specific to a single page
 @import 'pages/home';
+@import 'pages/about';
