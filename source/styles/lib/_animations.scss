@@ -44,6 +44,17 @@
   }
 }
 
+@keyframes out-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+}
+
 @keyframes fade-out {
   0% {
     opacity: 1;
@@ -57,16 +68,13 @@
   0% {
     opacity: 1;
     transform: translateY(0px);
-    filter:blur(0px);
   }
   50% {
     opacity: 0;
     transform: translateY(40px);
-    filter:blur(100px);
   }
   100% {
     opacity: 1;
     transform: translateY(0px);
-    filter:blur(0px);
   }
 }

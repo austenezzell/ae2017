@@ -1,4 +1,4 @@
-.hi {
+.hi, .page-intro {
   background: white;
   color: black;
   position: fixed;
@@ -9,9 +9,11 @@
   z-index: 999;
   pointer-events: none;
   animation-fill-mode: forwards;
-  animation-delay: 2s;
+  animation-delay: 1.6s;
   animation-duration: .4s;
   animation-name: fade-out;
+  visibility: visible;
+  display: block;
   p {
     animation-fill-mode: forwards;
     animation-duration: .4s;

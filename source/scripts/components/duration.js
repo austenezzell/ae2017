@@ -91,20 +91,26 @@ export default function () {
       e.preventDefault();
       body.classList.add('about');
       body.classList.remove('home');
+      document.querySelector('.about-this-site-transition').classList.add('page-intro');
       let stateObj = { title: "post" };
       history.pushState(stateObj, "about", "/about-this-site/?time=" + currentDuration);
+      setTimeout(function(){
+        document.querySelector('.about-this-site-transition').classList.remove('page-intro');
+      }, 2000);
     });
   }
 
-  const aboutColors = ['#FFF15F', '#BEEE98', '#98EED3', '#989BEE', '#EE98E7', '#F2ABAB' ]
-  aboutEl.style.background = aboutColors[Math.floor(Math.random() * aboutColors.length)];
+  // const aboutColors = ['#FFF15F', '#BEEE98', '#98EED3', '#989BEE', '#EE98E7', '#F2ABAB' ]
+  // aboutEl.style.background = aboutColors[Math.floor(Math.random() * aboutColors.length)];
 
   aboutCloseLink.addEventListener('click', (e) => {
-    aboutEl.style.background = aboutColors[Math.floor(Math.random() * aboutColors.length)];
+    // aboutEl.style.background = aboutColors[Math.floor(Math.random() * aboutColors.length)];
     aboutEl.classList.add('fade-blur');
     let stateObj = { title: "post" };
     history.pushState(stateObj, "home", "/?time=" + currentDuration);
+    body.classList.add('about-out');
     setTimeout(function(){
+      body.classList.remove('about-out');
       body.classList.remove('about');
       body.classList.add('home');
       aboutEl.classList.remove('fade-blur');

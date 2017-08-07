@@ -7,13 +7,19 @@ body {
   transition: background 2s ease-out;
 }
 
-
-.fade-blur {
-  animation-delay: 0s;
-  animation-duration: .9s;
-  animation-name: fade-blur;
-  animation-fill-mode: forwards;
+.page-transition {
+  visibility: hidden;
+  display: none;
+  // opacity: 0;
+  pointer-events: none;
 }
+
+// .fade-blur {
+//   animation-delay: 0s;
+//   animation-duration: .9s;
+//   animation-name: fade-blur;
+//   animation-fill-mode: forwards;
+// }
 .transitioning {
   .transition {
     animation-delay: 0s;
