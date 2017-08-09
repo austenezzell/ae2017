@@ -4,73 +4,79 @@ body {
   @include regular-font();
   line-height: $line-height;
   background: white;
-  transition: background 2s ease-out;
 }
 
 .page-transition {
   visibility: hidden;
   display: none;
-  // opacity: 0;
   pointer-events: none;
 }
 
-// .fade-blur {
-//   animation-delay: 0s;
-//   animation-duration: .9s;
-//   animation-name: fade-blur;
-//   animation-fill-mode: forwards;
-// }
-.transitioning {
-  .transition {
-    animation-delay: 0s;
-    animation-duration: .6s;
-    animation-name: out-in;
+.bg-transition {
+  position: relative;
+  overflow-x: hidden;
+}
+.transition-element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  &:after {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 0;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 0;
   }
 }
 
+.transitioning-to-short {
+  .transition-element {
+    &:after {
+      animation-delay: 0s;
+      animation-duration: .6s;
+      animation-name: left-right;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+.transitioning-to-long {
+  .transition-element {
+    &:before {
+      animation-delay: 0s;
+      animation-duration: .6s;
+      animation-name: right-left;
+      animation-fill-mode: forwards;
+    }
+  }
+}
 body.short {
+  background: white;
+  .bg-transition {
+    background: white;
+  }
   .medium-duration, .medium-duration-block, .medium-duration-flex, .long-duration, .long-duration-block, .long-duration-flex, .medium-and-long-duration {
     display: none;
-  }
-  background: white;
-  .project {
-    transition: background 2s ease-out;
-  }
-  .project-module {
-    background: white;
-  }
-  footer {
-    background: white;
-  }
-}
-
-body.medium {
-  background: $color-gray;
-  .medium-duration {
-    display: inline;
-  }
-  .medium-duration-block {
-    display: block;
-  }
-  .medium-duration-flex {
-    display: flex;
-  }
-  .long-duration, .long-duration-block, .long-duration-flex {
-    display: none;
-  }
-  .project {
-    transition: background 2s ease-out;
-  }
-  .project-module {
-    background: $color-gray;
-  }
-  footer {
-    background: $color-gray;
   }
 }
 
 body.long {
-  background: $color-black;
+  background: #000;
+
   color: white;
   a {
     color: white;
@@ -95,12 +101,6 @@ body.long {
   }
   .not-long-duration {
     display: none;
-  }
-  .project {
-    transition: background 2s ease-out;
-  }
-  .project-module {
-    background: $color-black;
   }
   footer {
     background: $color-black;

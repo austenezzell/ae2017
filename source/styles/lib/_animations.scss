@@ -1,3 +1,19 @@
+@keyframes right-left {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes left-right {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
 @keyframes fade-blur {
   0% {
     transform: translateY(0px);

@@ -36,6 +36,9 @@ body.about-out {
   p, ul, li a, a {
     color: white;
   }
+  a:hover {
+    color: black;
+  }
   .close-about {
     z-index: 999;
     display: block;

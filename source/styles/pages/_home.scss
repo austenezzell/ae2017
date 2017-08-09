@@ -30,7 +30,7 @@
   margin: $based_spacing * 6 0 0;
 }
 .project-module {
-  background: white;
+  // background: white;
   margin: $based_spacing * 2 0 $based_spacing * 7;
   @include breakpoint(md) {
     margin: $based_spacing * 2 0 $based_spacing * 10;
@@ -52,6 +52,16 @@
   img {
     width: 100%;
     height: 100%;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+  }
+  video {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
   }
   .project-intro {
     position: relative;
@@ -100,6 +110,7 @@
       display: inline-block;
       margin-bottom: $based_spacing;
       @extend .p;
+      word-break: break-all;
     }
   }
 }

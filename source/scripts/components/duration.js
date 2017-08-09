@@ -66,14 +66,16 @@ export default function () {
     timeBtn[i].addEventListener('click', (e) => {
       e.preventDefault();
       let currentDuration = e.target.getAttribute('data-time');
-
-      document.querySelector('body').classList.add('transitioning');
-
+      // document.querySelector('body').classList.add('transitioning');
+      if (currentDuration == 'long') {
+        document.querySelector('body').classList.add('transitioning-to-long');
+      }
+      if (currentDuration == 'short') {
+        document.querySelector('body').classList.add('transitioning-to-short');
+      }
       setTimeout(function(){
         changeTime(currentDuration);
-      }, 300);
-      setTimeout(function(){
-        document.querySelector('body').classList.remove('transitioning');
+        document.querySelector('body').classList.remove('transitioning-to-short', 'transitioning-to-long');
       }, 600);
 
       if (e.target.classList.contains('footer-long-btn')) {
