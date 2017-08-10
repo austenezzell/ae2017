@@ -1,35 +1,6 @@
 /*
   Font settings
-  - SVG fonts need #font_id from <font> tag
 */
-//
-// @mixin font() {
-//   $font-path: '/assets/fonts/pt-sans/';
-//   $font-path-regular: 'PTS55F-webfont';
-//   $font-path-bold: 'PTS75F-webfont';
-//
-//   @font-face {
-//     font-family: 'pt-sans-regular';
-//     src: url('#{$font-path}#{$font-path-regular}.eot');
-//     src: url('#{$font-path}#{$font-path-regular}.eot') format('embedded-opentype'),
-//          url('#{$font-path}#{$font-path-regular}.woff') format('woff'),
-//          url('#{$font-path}#{$font-path-regular}.ttf') format('truetype'),
-//          url('#{$font-path}#{$font-path-regular}.svg#pt_sansregular') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-//   }
-//
-//   @font-face {
-//     font-family: 'pt-sans-bold';
-//     src: url('#{$font-path}#{$font-path-bold}.eot');
-//     src: url('#{$font-path}#{$font-path-bold}.eot') format('embedded-opentype'),
-//          url('#{$font-path}#{$font-path-bold}.woff') format('woff'),
-//          url('#{$font-path}#{$font-path-bold}.ttf') format('truetype'),
-//          url('#{$font-path}#{$font-path-bold}.svg#pt_sansbold') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-//   }
-// }
 
 @mixin regular-font() {
   font-family: 'Work Sans', sans-serif;

@@ -12,9 +12,9 @@ module.exports = () => gulp.src(`${paths.build}/**/*.html`)
   .pipe(useref({
     searchPath: paths.build
   }))
-  .pipe(gulpif('*.css', uncss({
-    html: [`${paths.build}/**/*.html`]
-  })))
+  // .pipe(gulpif('*.css', uncss({
+  //   html: [`${paths.build}/**/*.html`]
+  // })))
   .pipe(gulpif('*.js', uglify()))
   .pipe(gulpif('*.js', rev()))
   .pipe(gulpif('*.css', cssnano()))

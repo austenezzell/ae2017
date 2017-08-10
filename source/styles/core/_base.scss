@@ -14,9 +14,11 @@ body {
 
 .bg-transition {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
+
 .transition-element {
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -54,6 +56,7 @@ body {
     }
   }
 }
+
 .transitioning-to-long {
   .transition-element {
     &:before {
@@ -64,6 +67,7 @@ body {
     }
   }
 }
+
 body.short {
   background: white;
   .bg-transition {
@@ -76,7 +80,6 @@ body.short {
 
 body.long {
   background: #000;
-
   color: white;
   a {
     color: white;
@@ -117,18 +120,17 @@ p, .p {
   margin-top: 0;
   margin-bottom: $based_spacing;
   font-size: 32px;
-
   @include breakpoint(md) {
     font-size: 40px;
   }
   @include breakpoint(lg) {
     font-size: 64px;
   }
-
   @include breakpoint(xxl) {
     font-size: 72px;
   }
 }
+
 p.small-text {
   font-size: 18px;
   line-height: 1.5;
@@ -136,6 +138,7 @@ p.small-text {
     font-size: 24px;
   }
 }
+
 h5 {
   margin-top: $based_spacing * 2;
   margin-bottom: $based_spacing / 2;
@@ -182,24 +185,19 @@ hr {}
 .minvh100 {
   min-height: 100vh;
 }
-
 .vh100 {
   height: 100vh;
 }
-
 .differene-text {
   color: white;
   mix-blend-mode: difference;
 }
-
 .difference {
   mix-blend-mode: difference;
 }
-
 .pe-none {
   pointer-events: none;
 }
-
 .nobr {
   white-space: nowrap;
 }

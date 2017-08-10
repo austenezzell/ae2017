@@ -20,17 +20,19 @@
     animation-name: in-right;
   }
 }
+
 .portrait {
   margin: $based_spacing * 1 0;
   @include breakpoint(md) {
     margin: $based_spacing * 4 0;
   }
 }
+
 .section-title {
   margin: $based_spacing * 6 0 0;
 }
+
 .project-module {
-  // background: white;
   margin: $based_spacing * 2 0 $based_spacing * 7;
   @include breakpoint(md) {
     margin: $based_spacing * 2 0 $based_spacing * 10;
@@ -45,6 +47,7 @@
     margin: $based_spacing * 2 0 $based_spacing * 16;
   }
 }
+
 .project {
   position: relative;
   text-decoration: none;
@@ -52,23 +55,28 @@
   img {
     width: 100%;
     height: 100%;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;          /* Likely future */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   video {
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    user-select: none;          /* Likely future */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
+
   .project-intro {
     position: relative;
+    padding: $based_spacing;
     @include breakpoint(sm) {
       position: absolute;
+      left: 0;
+      height: 100%;
     }
   }
+
   .secondary-asset-container {
     position: absolute;
     left: 0;
@@ -79,6 +87,7 @@
       height: 100%;
     }
   }
+
   .secondary-asset {
     position: absolute;
     visibility: hidden;
@@ -96,12 +105,17 @@
       }
     }
   }
+
   .secondary-asset.active {
     visibility: visible;
   }
+
   .project-overview {
     background: $color-primary;
-    padding: 40px;
+    padding: 16px;
+    @include breakpoint(sm) {
+      padding: 40px;
+    }
     p, h5, a {
       color: white;
     }

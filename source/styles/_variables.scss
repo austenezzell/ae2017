@@ -11,11 +11,11 @@ $based_headline-line-height: 1.125;
 $based_paragraph-line-height: $based_line-height;
 $based_grid-breakpoints: (
   xs: 0,
-  sm: 32rem,
-  md: 48rem,
-  lg: 64rem,
-  xl: 80rem,
-  xxl: 110rem,
+  sm: 512px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1760px,
 );
 $based_grid-columns: 8;
 $based_grid-max-width: 100%;

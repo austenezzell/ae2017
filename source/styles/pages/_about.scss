@@ -13,6 +13,7 @@ body.about {
     opacity: 1;
   }
 }
+
 body.about-out {
   overflow-y: hidden;
   .about-content {
@@ -21,6 +22,7 @@ body.about-out {
     animation-name: out-left;
   }
 }
+
 .about-content {
   visibility: hidden;
   position: fixed;
@@ -32,7 +34,6 @@ body.about-out {
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   padding: 120px 0;
-
   p, ul, li a, a {
     color: white;
   }
