@@ -1,6 +1,12 @@
 /*
   Nav styles
 */
+nav {
+  a {
+    // color: $color-gray;
+    // text-decoration: none;
+  }
+}
 .time-btn {
   display: inline-block;
   margin: 0 6px;
@@ -11,18 +17,21 @@
 
 .short {
   .short-btn {
-    color: $color-primary;
+    color: $color-gray;
+    text-decoration: none;
   }
 }
 
 .medium {
   .medium-btn {
-    color: $color-primary;
+    color: $color-black;
+    // text-decoration: underline;
   }
 }
 
 .long {
   .long-btn {
-    color: $color-primary;
+    color: $color-gray;
+    text-decoration: none;
   }
 }

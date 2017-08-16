@@ -4,6 +4,9 @@ export default function () {
   const loadImmediatlyLong = document.querySelectorAll('.load-immediatly-long');
   const loadImmediatlyMedium = document.querySelectorAll('.load-immediatly-medium');
   let currentDuration = 'short';
+  let newDurration = 'short';
+  let currentPage = 'home';
+
 
   let getParameterByName = (time, url) => {
     if (!url) {
@@ -25,9 +28,9 @@ export default function () {
   let pushTime = (currentDuration) => {
     let stateObj = { title: "post" };
     if (body.classList.contains('about')) {
-        history.pushState(stateObj, "Time", "/about-this-site/?time=" + currentDuration);
+      history.pushState(stateObj, "Time", "/about-this-site/?time=" + currentDuration);
     } else {
-        history.pushState(stateObj, "Time", "/?time=" + currentDuration);
+      history.pushState(stateObj, "Time", "/?time=" + currentDuration);
     }
   }
 
@@ -42,11 +45,9 @@ export default function () {
   }
 
   let changeTime = (currentDuration) => {
-    for (var i = 0; i < timeBtn.length; i++) {
-      body.classList.remove('short', 'medium', 'long');
-      body.classList.add(currentDuration);
-      pushTime(currentDuration);
-    }
+    body.classList.remove('short', 'medium', 'long');
+    body.classList.add(currentDuration);
+    pushTime(currentDuration);
     if (currentDuration == 'medium') {
       loadAssets(loadImmediatlyMedium);
     }
@@ -56,7 +57,7 @@ export default function () {
   }
 
   if (getParameterByName('time') !== null) {
-    let currentDuration = getParameterByName('time');
+    currentDuration = getParameterByName('time');
     changeTime(currentDuration);
   } else {
     changeTime(currentDuration);
@@ -65,8 +66,7 @@ export default function () {
   for (var i = 0; i < timeBtn.length; i++) {
     timeBtn[i].addEventListener('click', (e) => {
       e.preventDefault();
-      let currentDuration = e.target.getAttribute('data-time');
-      // document.querySelector('body').classList.add('transitioning');
+      currentDuration = e.target.getAttribute('data-time');
       if (currentDuration == 'long') {
         document.querySelector('body').classList.add('transitioning-to-long');
       }
@@ -92,6 +92,7 @@ export default function () {
     aboutLink[i].addEventListener('click', (e) => {
       e.preventDefault();
       body.classList.add('about');
+      currentPage = 'about';
       body.classList.remove('home');
       document.querySelector('.about-this-site-transition').classList.add('page-intro');
       let stateObj = { title: "post" };
@@ -102,21 +103,44 @@ export default function () {
     });
   }
 
-  // const aboutColors = ['#FFF15F', '#BEEE98', '#98EED3', '#989BEE', '#EE98E7', '#F2ABAB' ]
-  // aboutEl.style.background = aboutColors[Math.floor(Math.random() * aboutColors.length)];
-
-  aboutCloseLink.addEventListener('click', (e) => {
-    // aboutEl.style.background = aboutColors[Math.floor(Math.random() * aboutColors.length)];
+  let closeAbout = () => {
     aboutEl.classList.add('fade-blur');
     let stateObj = { title: "post" };
     history.pushState(stateObj, "home", "/?time=" + currentDuration);
     body.classList.add('about-out');
+    currentPage = 'home';
     setTimeout(function(){
       body.classList.remove('about-out');
       body.classList.remove('about');
       body.classList.add('home');
       aboutEl.classList.remove('fade-blur');
     }, 700);
+  }
+
+  aboutCloseLink.addEventListener('click', (e) => {
+    closeAbout();
+  });
+
+  window.addEventListener('popstate', function(event) {
+    if (currentPage == 'about') {
+      closeAbout();
+    } else {
+      if (getParameterByName('time') !== null) {
+        if (currentDuration !== getParameterByName('time')) {
+          currentDuration = getParameterByName('time');
+          changeTime(currentDuration);
+        };
+      }
+    }
+
+
+      // if (currentDuration == 'long') {
+      //   console.log('long');
+      //   currentDuration = 'short';
+      // } else {
+      //   console.log('short');
+      //   currentDuration = 'long';
+      // }
   });
 
 }

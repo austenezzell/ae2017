@@ -14,7 +14,7 @@
       <p class="text-center mt2 my4@md differene-text">I'm Austen Ezzell,<br><span class="nobr">Creative Director –</span><br><span class="nobr">Digital Experience</span><br>at <span class="nobr"><a href="http://www.cincodesign.com" class="differene-text">Cinco Design</a>.</span></p>
     </div>
     <div class="col span-8 offset-0 span-6@sm offset-1@sm  span-4@xxl offset-2@xxl ">
-      <nav class="primary-nav mb2"><p class="text-center small-text "><span class="nobr differene-text">How much time</span> <span class="nobr differene-text">do you have?</span><br><a class="time-btn short-btn " data-time="short" href="#">30 seconds</a> <a class="time-btn long-btn " data-time="long" href="#">5 minutes</a></p></nav>
+      <nav class="primary-nav mb2"><p class="text-center small-text "><span class="nobr differene-text">How much time</span> <span class="nobr differene-text">do you have?</span><br><a id="primary-short-btn" class="time-btn short-btn" data-time="short" href="#">30 seconds</a> <a id="primary-long-btn" class="time-btn long-btn " data-time="long" href="#">5 minutes</a></p></nav>
     </div>
     <div class="col span-8 offset-0 transition px0">
       <div class="portrait long-duration-block">
@@ -38,7 +38,8 @@
   <div class="flex-row project-module project">
     @@include('_hero-img.html', { "image": "/assets/images/hanour/travis.jpg", "col-offset": "span-7 offset-1 span-4@sm offset-0@sm" })
     @@include('_hook.html', { "hook": "Introducing a director who’s work speaks for itself.", "col-offset": "span-7 offset-1 span-3@sm offset-3@sm" })
-    @@include('_secondary-image.html', { "image": "/assets/images/hanour/beckhamjr.png", "col-offset": "span-7 offset-1 span-5@sm offset-3@sm" })
+    @@include('_secondary-image.html', { "image": "/assets/images/hanour/landing-screen.png", "col-offset": "span-7 offset-0 span-5@sm offset-3@sm" })
+    @@include('_secondary-image.html', { "image": "/assets/images/hanour/beckhamjr.png", "col-offset": "span-7 offset-1 span-5@sm offset-0@sm" })
     @@include('_secondary-image.html', { "image": "/assets/images/hanour/nike-vapor.png", "col-offset": "span-6 offset-0" })
     @@include('_secondary-video.html', { "video-link": "https://player.vimeo.com/external/220129074.hd.mp4?s=7ecd273c4757ca2ab959cd0956311adf0afc7417&profile_id=174", "col-offset": "span-8 offset-0 span-6@sm offset-1@sm" })
     @@include('_secondary-video.html', { "video-link": "https://player.vimeo.com/external/225182874.hd.mp4?s=25e4cf2c225b5d2bb5ef73b40069545802ab4936&profile_id=174", "col-offset": "span-7 span-4@sm offset-0@sm" })
@@ -94,11 +95,10 @@
     @@include('_hero-img.html', { "image": "/assets/images/hora/hora_appphoneinhand3-2.jpg", "col-offset": "span-7 offset-0 span-5@sm offset-3@sm" })
     @@include('_hook.html', { "hook": "Can a connected smart device help you disconnect?", "col-offset": "span-7 offset-0 span-5@sm offset-0@sm" })
     @@include('_secondary-video.html', { "video-link": "https://player.vimeo.com/external/165376142.hd.mp4?s=81c1496a030ac87802a95df3da50f6cec7ff59fb&profile_id=174", "col-offset": "span-7 offset-1 span-6@sm offset-1@sm" })
-    @@include('_secondary-image.html', { "image": "/assets/images/hora/hora_marble.jpg", "col-offset": "span-6 offset-0 span-4@sm offset-0@sm" })
     @@include('_secondary-image.html', { "image": "/assets/images/hora/hora_off_base.jpg", "col-offset": "span-7 offset-1 span-5@sm offset-3@sm" })
     @@include('_secondary-video.html', { "video-link": "https://player.vimeo.com/external/167498190.hd.mp4?s=091c3e983743f4596e12cd96fab817112b4b32bf&profile_id=119", "col-offset": "span-6 offset-1 span-6@sm offset-1@sm" })
     @@include('_secondary-image.html', { "image": "/assets/images/hora/Hora_In_Hand.jpg", "col-offset": "span-8 offset-0 span-8@sm offset-0@sm" })
-    @@include('_secondary-video.html', { "video-link": "https://player.vimeo.com/external/167500442.hd.mp4?s=f934a9db1f0b95530442e2931891572d18c2b347&profile_id=119", "col-offset": "span-7 offset-0 span-4@sm offset-0@sm" })
+    @@include('_secondary-video.html', { "video-link": "https://player.vimeo.com/external/167500442.hd.mp4?s=f934a9db1f0b95530442e2931891572d18c2b347&profile_id=119", "col-offset": "span-7 offset-0 span-4@sm offset-2@sm" })
     @@include('_role-description.html', { "role": "My Role: UX / UI", "description": "Cinco created a device that helps us control the rhythm of our day, keeps us connected to what's important and limits our reliance on screens.", "col-offset": "span-8 offset-0 span-5@sm offset-2@sm" })
   </div>
 
