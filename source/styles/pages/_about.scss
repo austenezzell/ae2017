@@ -43,13 +43,14 @@ body.about-out {
   .close-about {
     z-index: 999;
     display: block;
-    cursor: pointer;
+    // cursor: pointer;
+    cursor: url('/assets/images/cursor-pointer.png') 31 23,auto;
     position: fixed;
     top: 30px;
     right: 30px;
     p {
       margin: 0;
-      color: black;
+      text-decoration: underline;
     }
   }
 }

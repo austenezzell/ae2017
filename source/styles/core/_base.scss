@@ -4,7 +4,13 @@ body {
   @include regular-font();
   line-height: $line-height;
   background: white;
+  cursor: url('/assets/images/cursor-default.png') 6 0,auto;
+  a {
+    cursor: url('/assets/images/cursor-pointer.png') 31 23,auto;
+  }
 }
+
+::selection { background: $color-primary; }
 
 .page-transition {
   visibility: hidden;

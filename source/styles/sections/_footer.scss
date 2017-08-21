@@ -5,9 +5,11 @@
 footer {
 
   a {
-    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;  
+    }
   }
-  
+
   ul {
     margin: 0;
     padding: 0;

@@ -17,8 +17,16 @@ nav {
 
 .short {
   .short-btn {
-    color: $color-gray;
+    // color: $color-gray;
+    // text-decoration: none;
+
+  }
+  .long-btn {
     text-decoration: none;
+    &:hover {
+      color: blue;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -31,7 +39,14 @@ nav {
 
 .long {
   .long-btn {
-    color: $color-gray;
+    // color: $color-gray;
+    // text-decoration: none;
+  }
+  .short-btn {
     text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: blue;
+    }
   }
 }
