@@ -23,6 +23,9 @@ body {
   overflow: hidden;
 }
 
+.work {
+  padding-top: $based_spacing * 3;
+}
 .transition-element {
   pointer-events: none;
   position: absolute;
